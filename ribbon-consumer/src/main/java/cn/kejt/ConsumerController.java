@@ -15,6 +15,6 @@ public class ConsumerController {
 
     @RequestMapping(value = "/ribbon-consumer", method = RequestMethod.GET)
     public String helloConsumer() {
-        return helloService.helloService();
+        return helloService.hello();
     }
 }

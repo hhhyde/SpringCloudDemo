@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
-@EnableCircuitBreaker // 断路器
+@EnableCircuitBreaker // 开启断路器
 @SpringBootApplication
 // @SpringCloudApplication 包含了上面三个注解
 public class ConsumerApplication {
