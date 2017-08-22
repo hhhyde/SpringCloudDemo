@@ -47,6 +47,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- 添加依赖服务接口依赖,这样就不用再定义接口了,只用在service-api中定义,这边只管实现 -->
+		<dependency>
+			<groupId>cn.kejt</groupId>
+			<artifactId>hello-service-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
