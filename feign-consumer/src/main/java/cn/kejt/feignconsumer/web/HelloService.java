@@ -1,5 +1,6 @@
 package cn.kejt.feignconsumer.web;
 
+import cn.kejt.feignconsumer.config.DisableHystrixConfiguration;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +10,9 @@ import org.springframework.web.bind.annotation.*;
  *
  * @apiNote 服务名不区分大小写
  */
-@FeignClient(value = "hello-service")
+// 针对某个服务,禁用 Hystrix
+//@FeignClient(value = "HELLO-SERVICE",configuration = DisableHystrixConfiguration.class)
+@FeignClient(value = "HELLO-SERVICE",fallback = HelloServiceFallback.class)
 public interface HelloService {
 
     @RequestMapping("/hello")
