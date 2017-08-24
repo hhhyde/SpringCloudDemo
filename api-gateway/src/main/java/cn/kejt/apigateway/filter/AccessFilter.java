@@ -22,12 +22,15 @@ public class AccessFilter extends ZuulFilter {
      */
     @Override
     public String filterType() {
-        // pre 表示 请求被路由之前执行
+        // pre:请求被路由之前执行
+        // routing:路由请求时被条用
+        // post:在 routing 或者 error 过滤器之后被调用,正常情况下在 routing 之后,报错之后再 error 之后
+        // error:处理请求时发生错误时被调用
         return "pre";
     }
 
     /**
-     * 过滤器的执行顺序,当请求在一个阶段中存在多个过滤器时,定义执行顺序
+     * 过滤器的执行顺序,当请求在一个阶段中存在多个过滤器时,定义执行顺序,数字越小优先级越高
      * @return
      */
     @Override
