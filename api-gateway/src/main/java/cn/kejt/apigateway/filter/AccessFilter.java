@@ -59,7 +59,7 @@ public class AccessFilter extends ZuulFilter {
             // 返回 401 错误
             ctx.setResponseStatusCode(401);
             // optional
-            ctx.setResponseBody("可添加错误描述");
+            ctx.setResponseBody("被过滤器中断了,可添加错误描述");
             return null;
         }
         log.info("access token ok");
