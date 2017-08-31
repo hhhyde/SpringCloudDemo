@@ -35,7 +35,7 @@ public class AccessFilter extends ZuulFilter {
      */
     @Override
     public int filterOrder() {
-        return 0;
+        return 5;
     }
 
     /**
