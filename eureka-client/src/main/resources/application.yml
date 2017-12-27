@@ -1,0 +1,11 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:1111/eureka/
+    instance:
+        instance-id: ${spring.application.name}:${random.int}
+server:
+    port: 8081
+spring:
+    application:
+        name: hello-service
