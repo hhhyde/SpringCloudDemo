@@ -1,0 +1,14 @@
+debug: false
+server:
+    port: 1111
+eureka:
+    client:
+        fetch-registry: false
+        register-with-eureka: false
+        serviceUrl:
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    instance:
+        hostname: localhost
+    server:
+        enable-self-preservation: false
+
